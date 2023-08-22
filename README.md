@@ -116,7 +116,7 @@ docker start -ai rectify
 cd /rectify
 ```
 
-# RQ2: Compilation rate analysis
+## RQ2: Compilation rate analysis
 
 We will now reproduce Table 2. This script may take longer to run as it needs to iterate through 5000 generated patches per bug.
 
@@ -126,7 +126,7 @@ python -m rectify.cli.rq2
 
 This command will print a table in the console, which corresponds to Table 2.
 
-# RQ3: Component contribution
+## RQ3: Component contribution
 
 We now reproduce Table 3.
 
@@ -140,7 +140,7 @@ The detailed correct patches can be found through the following links:
 - [[Mem] correct patches](data/correct-patches/rq3/d4j1-codet5-mem)
 - [[Rectify] correct patches](data/correct-patches/rq3/d4j1-codet5-rectify)
 
-# RQ4: Generalizability
+## RQ4: Generalizability
 
 This script will reproduce Table 4.
 
