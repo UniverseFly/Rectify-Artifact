@@ -61,9 +61,23 @@ python -m rectify.cli.main validate -d chart-9-rectify
 python -m rectify.cli.main evaluate -d chart-9-rectify
 ```
 
-If everything works correctly, you will see an output table as follows:
+If everything works correctly, you will see a similar output table as follows:
 
-TBD
+```
+root@1d7fea7789ed:/rectify# python -m rectify.cli.main evaluate -d chart-9-rectify
+[chart-9-rectify] Loading raw generation data...
+Done
+[chart-9-rectify] Loading transformed raw generation data...
+Done
+[chart-9-rectify] Loading validation raw data...
+Done
+                                             Rectify Evaluation Results                                              
+┏━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓
+┃ Tag             ┃ Average Gen Time ┃ %Compilable Patches ┃ %Plausible Patches ┃ #Plausible Fixes ┃ #Correct Fixes ┃
+┡━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩
+│ chart-9-rectify │ 1.33s            │ 100.0%              │ 0.000%             │ 0                │ -              │
+└─────────────────┴──────────────────┴─────────────────────┴────────────────────┴──────────────────┴────────────────┘
+```
 
 # Reproduce RQ Evaluation
 
