@@ -38,7 +38,7 @@ docker pull universefly/rectify-fse23:latest
 docker run -it --name rectify universefly/rectify-fse23
 # Now you will get into a "virtual environment" provided by Docker
 # Enter the `rectify` directory
-cd rectify
+cd /rectify
 echo "Hello Rectify!"
 ```
 
@@ -107,10 +107,13 @@ Also the two venn diagrams shown in Figure 6 are saved in the `plots` directory.
 ```bash
 # Exit the docker container with e.g., Ctrl-D
 # Save the plots to your local machine
-docker cp universefly/rectify-fse23:/root/rectify/plots /path/to/your/local/directory
+sudo docker cp rectify:/rectify/plots /path/to/your/local/directory
 # Now you can open the plots with your favorite image viewer
 # Return to the docker container
-docker start -ai universefly/rectify-fse23
+docker start -ai rectify
+
+# Return to the `rectify` directory
+cd /rectify
 ```
 
 # RQ2: Compilation rate analysis
