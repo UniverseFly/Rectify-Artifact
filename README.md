@@ -160,7 +160,7 @@ The detailed correct patches can be found through the following links:
 # Reproduce patch generation
 
 > [!WARNING]
-> ⚠️⚠️⚠️ This section is mainly for advanced readers who have time to reproduce the entire patch generation process. These commands may take days or weeks to finish. ⚠️⚠️⚠️
+> ⚠️⚠️⚠️ This section is mainly for advanced readers who have time to reproduce the entire patch generation process. These commands may take days or weeks to finish. Also, the generation time may vary significantly depending on the hardware used for patch generation. ⚠️⚠️⚠️
 
 ## RQ1
 
