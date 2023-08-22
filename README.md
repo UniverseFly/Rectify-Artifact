@@ -13,11 +13,11 @@ Welcome to the artifact repository for **Rectify**, a patch generation tool intr
 >   - Optional (b): NVIDIA GPU(s) with >30G memory (for Incoder-6.7B patch generation)
 > 
 > Although it is recommended to run the artifact with NVIDIA GPUs for faster patch generation, it is not a requirement.
-> In this case, the CPU will be responsible for the patch generation.
+> When there is no GPU available, the CPU will be responsible for the patch generation.
 > In this artifact documentation, we only explain the CPU-only Docker-based pipeline for conciseness.
 > We encourage advanced readers who want to run the artifact with GPU support to check the [documentation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html) of NVIDIA Docker.
 
-# Before we start
+## Before we start
 
 Before we start, let's first make sure Docker is installed: [Installation Guide](https://docs.docker.com/engine/install/).
 
@@ -44,7 +44,7 @@ echo "Hello Rectify!"
 
 Congratulations! We are now ready for the artifact evaluation.
 
-# Whet your appetite
+## Whet your appetite
 
 Let's run some example scripts to see how Rectify works.
 
@@ -79,14 +79,14 @@ Done
 └─────────────────┴──────────────────┴─────────────────────┴────────────────────┴──────────────────┴────────────────┘
 ```
 
-# Reproduce RQ Evaluation
+## Reproduce RQ Evaluation
 
 We will now show how each RQ can be reproduced through the artifact by applying Rectify evaluation script on **pre-generated patches**.
 
 > [!WARNING]
 > We also provide documentation to [reproduce the entire patch generation](#reproduce-patch-generation) in different RQs, but it is not recommended for the readers to go through the entire process as it may take days or weeks to finish.
 
-## RQ1: Comparison with existing tools
+### RQ1: Comparison with existing tools
 
 We will now reproduce Table 1, Figure 6, and the number of bugs fixed by removing the bugs that overlap with the CodeT5 training data, which is shown in Section 8 THREATS TO VALIDITY.
 
@@ -116,7 +116,7 @@ docker start -ai rectify
 cd /rectify
 ```
 
-## RQ2: Compilation rate analysis
+### RQ2: Compilation rate analysis
 
 We will now reproduce Table 2. This script may take longer to run as it needs to iterate through 5000 generated patches per bug.
 
@@ -126,7 +126,7 @@ python -m rectify.cli.rq2
 
 This command will print a table in the console, which corresponds to Table 2.
 
-## RQ3: Component contribution
+### RQ3: Component contribution
 
 We now reproduce Table 3.
 
@@ -140,7 +140,7 @@ The detailed correct patches can be found through the following links:
 - [[Mem] correct patches](data/correct-patches/rq3/d4j1-codet5-mem)
 - [[Rectify] correct patches](data/correct-patches/rq3/d4j1-codet5-rectify)
 
-## RQ4: Generalizability
+### RQ4: Generalizability
 
 This script will reproduce Table 4.
 
@@ -160,12 +160,12 @@ The detailed correct patches can be found through the following links:
 
 🎉🎉🎉 Congratulations! You have successfully reproduced all the results in the paper! 🎉🎉🎉
 
-# Reproduce patch generation
+## Reproduce patch generation
 
 > [!WARNING]
 > ⚠️⚠️⚠️ This section is mainly for advanced readers who have time to reproduce the entire patch generation process. These commands may take days or weeks to finish. Also, the generation time may vary significantly depending on the hardware used for patch generation. ⚠️⚠️⚠️
 
-## RQ1
+### RQ1
 
 We generate Defects4j 1.2 single-hunk bugs and 2.0 single-line bugs with the help of repair templates. This is achieved through the following command:
 
@@ -174,11 +174,11 @@ D4J1_SINGLE_HUNK=1 ACTIVE=1 TEMPLATE=1 python -m rectify.cli.main repair -b ".*"
 D4J2_SINGLE_LINE=1 ACTIVE=1 TEMPLATE=1 python -m rectify.cli.main repair -b ".*" --method pruned-mem -n 5000 -d rq1-d4j2
 ```
 
-## RQ2
+### RQ2
 
 RQ2 is based on RQ1's generated patches, so we don't need to run any additional commands.
 
-## RQ3
+### RQ3
 
 In RQ3, we generate 500 patches for each bug with 4 different configurations, using the following commands:
 
@@ -190,7 +190,7 @@ D4J1_SINGLE_HUNK=1 python -m rectify.cli.main repair -b ".*" --method pruned-mem
 ACTIVE=1 D4J1_SINGLE_HUNK=1 python -m rectify.cli.main repair -b ".*" --method pruned-mem -n 500 -d rq3-rectify
 ```
 
-## RQ4
+### RQ4
 
 We further include Incoder-6.7B as the base model to generate patches for RQ4.
 
