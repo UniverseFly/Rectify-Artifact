@@ -70,7 +70,7 @@ TBD
 We will now show how each RQ can be reproduced through the artifact by applying Rectify evaluation script on **pre-generated patches**.
 
 > [!WARNING]
-> We also provide documentation to [reproduce the entire generation](#reproduce-patch-generation), but it is not recommended for the readers to go through the entire process as it may take days or weeks to finish.
+> We also provide documentation to [reproduce the entire patch generation](#reproduce-patch-generation) in different RQs, but it is not recommended for the readers to go through the entire process as it may take days or weeks to finish.
 
 # Reproduce patch generation
 
