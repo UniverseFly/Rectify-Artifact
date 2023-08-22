@@ -206,7 +206,7 @@ We further include Incoder-6.7B as the base model to generate patches for RQ4.
 D4J2_SINGLE_HUNK=1 python -m rectify.cli.main repair -b ".*" --method plain -n 500 -d rq4-codet5-d4j2-vanilla
 ACTIVE=1 D4J2_SINGLE_HUNK=1 python -m rectify.cli.main repair -b ".*" --method pruned-mem -n 500 -d rq4-codet5-d4j2-rectify
 
-INCODER=1 D4J2_SINGLE_HUNK=1 python -m rectify.cli.main repair -b ".*" --method plain -n 500 -d rq4-incoder-d4j1-vanilla
+INCODER=1 D4J1_SINGLE_HUNK=1 python -m rectify.cli.main repair -b ".*" --method plain -n 500 -d rq4-incoder-d4j1-vanilla
 INCODER=1 ACTIVE=1 D4J1_SINGLE_HUNK=1 python -m rectify.cli.main repair -b ".*" --method pruned-mem -n 500 -d rq4-incoder-d4j1-rectify
 
 INCODER=1 D4J2_SINGLE_HUNK=1 python -m rectify.cli.main repair -b ".*" --method plain -n 500 -d rq4-incoder-d4j2-vanilla
