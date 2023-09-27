@@ -1,5 +1,9 @@
 # ⚙️$`\mathbb{R}\mathrm{ectify}`$🛠️
 
+> [!WARNING]
+> Rectify is renamed to **Repilot** and this repo will be archived soon. Please check our official repo **[ise-uiuc/Repilot](https://github.com/ise-uiuc/Repilot)** for comprehensive documentation and source code, along with an updated artifact documentation.
+
+
 Welcome to the artifact repository for **Rectify**, a patch generation tool introduced in the ESEC/FSE'23 paper **"Copiloting the Copilots: Fusing Large Language Models with Completion Engines for Automated Program Repair"**!
 
 > [!IMPORTANT]
