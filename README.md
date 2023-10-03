@@ -1,8 +1,9 @@
+> [!IMPORTANT]
+> Rectify has been renamed to **Repilot**. Please check our official repo **[ise-uiuc/Repilot](https://github.com/ise-uiuc/Repilot)** for comprehensive documentation and source code, along with the updated artifact documentation.
+
+---
+
 # ⚙️$`\mathbb{R}\mathrm{ectify}`$🛠️
-
-> [!WARNING]
-> Rectify is renamed to **Repilot** and this repo will be archived soon. Please check our official repo **[ise-uiuc/Repilot](https://github.com/ise-uiuc/Repilot)** for comprehensive documentation and source code, along with an updated artifact documentation.
-
 
 Welcome to the artifact repository for **Rectify**, a patch generation tool introduced in the ESEC/FSE'23 paper **"Copiloting the Copilots: Fusing Large Language Models with Completion Engines for Automated Program Repair"**!
 
@@ -12,7 +13,7 @@ Welcome to the artifact repository for **Rectify**, a patch generation tool intr
 > 
 > - **OS**: A Linux system with **[Docker](https://docs.docker.com/engine/install/)** support.
 >   - Optional: [NVIDIA Docker](https://github.com/NVIDIA/nvidia-docker) support.
-> - **Hardware**: X86/X64 CPU; 16GB RAM; 1TB Storage; Good Network to Docker Hub.
+> - **Hardware**: X86/X64 CPU; 32GB RAM; 1TB Storage; Good Network to Docker Hub.
 >   - Optional (a): NVIDIA GPU(s) with >6G memory (for CodeT5 patch generation)
 >   - Optional (b): NVIDIA GPU(s) with >30G memory (for Incoder-6.7B patch generation)
 > 
