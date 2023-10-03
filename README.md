@@ -1,7 +1,5 @@
-> [!IMPORTANT]
+> [!WARNING]
 > Rectify has been renamed to **Repilot**. Please check our official repo **[ise-uiuc/Repilot](https://github.com/ise-uiuc/Repilot)** for comprehensive documentation and source code, along with the updated artifact documentation.
-
----
 
 # ⚙️$`\mathbb{R}\mathrm{ectify}`$🛠️
 
